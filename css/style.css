@@ -1,3 +1,63 @@
 body{
-	background: url(tic-tac-toe.png)
+	background: url(tic-tac-toe.png);
+	font-family: 'Orbitron', sans-serif;
 }
+
+h1{
+	text-align: center;
+	color: black;
+}
+
+.clearfix{
+	clear:both;
+}
+
+#container{
+	width: 350px;
+	overflow: auto;
+	margin:40px auto;
+	background: #7647a2;
+	padding-bottom: 40px;
+	border-radius: 10px
+}
+
+#board li {
+	float: left;
+	margin: 10px;
+	height: 70px;
+	width: 70px;
+	font-size: 55px;
+	background: #333;
+	color: #ccc;
+	list-style: none;
+	text-align: center;
+	border-radius: 5px;
+}
+#board li:hover, #reset:hover {
+	cursor: pointer;
+	background: black;
+}
+
+#reset{
+	border: 0;
+	background: #444;
+	color: #fff;
+	width: 70%;
+	padding: 15px;
+	border-radius: 5px;
+}
+
+.c{
+	color: green !important;	
+}
+
+.x{
+	color: red !important;
+}
+
+footer{
+	display: block;
+	text-align: center;
+	padding-top: 20px;
+}
+
