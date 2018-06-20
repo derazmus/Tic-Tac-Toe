@@ -44,13 +44,8 @@ $(document).ready(function() {
                         $("#board li").removeClass('disable');
                         $("#board li").removeClass('o');
                         $("#board li").removeClass('x');
-                    } else if (turns === 9) {
+                    } else if (turns === 8) {
                         $("#score").html("It is a tie game");
-                        $("#board li").text("+");
-                        $("#board li").removeClass('disable');
-                        $("#board li").removeClass('o');
-                        $("#board li").removeClass('x')
-                        turns = 0;
                     } else if ($(this).hasClass('disable')) {
                          $("#score").html("This spot is already taken");
                     } else if (turns % 2 === 0) {
