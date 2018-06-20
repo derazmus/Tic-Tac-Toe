@@ -13,6 +13,8 @@ $(document).ready(function() {
             var spot8 = $('#spot8');
             var spot9 = $('#spot9');
 
+
+
             $('#board li').on('click', function() {
                     if (spot1.hasClass('o') && spot2.hasClass('o') && spot3.hasClass('o') ||
                         spot4.hasClass('o') && spot5.hasClass('o') && spot6.hasClass('o') ||
@@ -23,7 +25,7 @@ $(document).ready(function() {
                         spot1.hasClass('o') && spot5.hasClass('o') && spot9.hasClass('o') ||
                         spot3.hasClass('o') && spot5.hasClass('o') && spot7.hasClass('o')
                     ) {
-                        alert("WINNER: O");
+                        $("#score").html("Winner is O");
                         $("#board li").text("+");
                         $("#board li").removeClass('disable');
                         $("#board li").removeClass('o');
@@ -37,20 +39,20 @@ $(document).ready(function() {
                         spot1.hasClass('x') && spot5.hasClass('x') && spot9.hasClass('x') ||
                         spot3.hasClass('x') && spot5.hasClass('x') && spot7.hasClass('x')
                     ) {
-                        alert("WINNER: X");
+                         $("#score").html("Winner is X");
                         $("#board li").text("+");
                         $("#board li").removeClass('disable');
                         $("#board li").removeClass('o');
                         $("#board li").removeClass('x');
-                    } else if (turns == 9) {
-                        alert("Tie Game")
+                    } else if (turns === 9) {
+                        $("#score").html("It is a tie game");
                         $("#board li").text("+");
                         $("#board li").removeClass('disable');
                         $("#board li").removeClass('o');
                         $("#board li").removeClass('x')
                         turns = 0;
                     } else if ($(this).hasClass('disable')) {
-                        alert('This spot is already filled');
+                         $("#score").html("This spot is already taken");
                     } else if (turns % 2 === 0) {
                         turns++;
                         $(this).text(o);
@@ -64,7 +66,7 @@ $(document).ready(function() {
                             spot1.hasClass('o') && spot5.hasClass('o') && spot9.hasClass('o') ||
                             spot3.hasClass('o') && spot5.hasClass('o') && spot7.hasClass('o')
                         ) {
-                            alert('Winner: O');
+                          $("#score").html("Winner is O");
                             turns = 0;
                         }
                         } else {
@@ -80,7 +82,7 @@ $(document).ready(function() {
                                 spot1.hasClass('x') && spot5.hasClass('x') && spot9.hasClass('x') ||
                                 spot3.hasClass('x') && spot5.hasClass('x') && spot7.hasClass('x')
                             ) {
-                                alert('Winner: x');
+                                 $("#score").html("Winner is X");
                                 turns = 0;
 
                             }
@@ -92,6 +94,7 @@ $(document).ready(function() {
                     $("#board li").removeClass('disable');
                     $("#board li").removeClass('o');
                     $("#board li").removeClass('x');
+                    $("#score").empty();
                     turns = 0;
                 });
             });

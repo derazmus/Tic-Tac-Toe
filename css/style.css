@@ -47,6 +47,15 @@ h1{
 	border-radius: 5px;
 }
 
+#score{
+	margin: 10px;
+	color: #ccc;
+	text-align: center;
+	font-family: 'Orbitron', sans-serif;
+	font-size:50px;
+
+}
+
 .o{
 	color: green!important;	
 }
